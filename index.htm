@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Trình cấu hình các dòng xe VinFast" />
+    <title>Bảng chi tiết các dòng xe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="car-list" aria-label="Danh sách xe">
+        <div class="brand">
+          <img
+            class="brand-logo"
+            src="images/Logo/Logo VinFast Minh Thanh TPHCM_tach nen ngang.png"
+            alt="VinFast Minh Thanh"
+          />
+          <div><strong>VINFAST</strong><small>Các phiên bản xe</small></div>
+        </div>
+        <div class="list-heading">
+          <span>Dòng xe</span><span id="car-count">10 mẫu</span>
+        </div>
+        <nav id="car-list-items"></nav>
+      </aside>
+
+      <main class="car-preview">
+        <header class="preview-header">
+          <button
+            class="mobile-menu"
+            id="mobile-menu"
+            aria-label="Mở danh sách xe"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <div>
+            <span class="eyebrow">Xe Điện · 2026</span>
+            <div class="car-name" id="car-name">
+              <img src="images/Bảng tên xe/VF 3.png" alt="VF 3" />
+            </div>
+          </div>
+          <span class="availability"><i></i> Có sẵn</span>
+        </header>
+        <div class="car-stage">
+          <div class="stage-line"></div>
+          <img
+            id="car-image"
+            src="images/VF3/Infinity Blanc.png"
+            alt="VinFast VF 3 màu Trắng Infinity Blanc"
+          />
+        </div>
+        <section class="specs" aria-labelledby="spec-title">
+          <div class="spec-heading">
+            <div>
+              <span class="eyebrow">THÔNG TIN XE</span>
+              <h2 id="spec-title">Thông số kỹ thuật</h2>
+            </div>
+            <span>Theo phiên bản đã chọn</span>
+          </div>
+          <div class="spec-placeholder">
+            <span
+              ><small id="spec-label-1">Công suất tối đa</small
+              ><strong id="spec-value-1">30 kW</strong></span
+            >
+            <span
+              ><small id="spec-label-2">Dung lượng pin khả dụng</small
+              ><strong id="spec-value-2">18,64 kWh</strong></span
+            >
+            <span
+              ><small id="spec-label-3">Quãng đường di chuyển</small
+              ><strong id="spec-value-3">215 km</strong></span
+            >
+          </div>
+        </section>
+      </main>
+
+      <aside class="car-config">
+        <div class="config-head">
+          <span class="eyebrow">CÁ NHÂN HÓA</span>
+          <h2>Cấu hình xe</h2>
+          <p>Lựa chọn phiên bản và màu sắc phù hợp.</p>
+        </div>
+        <section class="config-section">
+          <h3>Phiên bản</h3>
+          <div class="versions" id="versions"></div>
+        </section>
+        <section class="config-section">
+          <div class="section-row">
+            <h3>Màu xe</h3>
+            <span id="color-name">Trắng (Infinity Blanc)</span>
+          </div>
+          <div class="colors" id="colors"></div>
+          <p class="color-price" id="color-price">Không thu thêm</p>
+        </section>
+        <section class="config-section registration-section">
+          <h3>Khu vực lăn bánh</h3>
+          <div class="registration-options">
+            <label><span>TP.HCM / Hà Nội</span><input type="radio" name="registration-area" value="city" checked /></label>
+            <label><span>Tỉnh khác</span><input type="radio" name="registration-area" value="province" /></label>
+          </div>
+          <div class="registration-breakdown">
+            <div><span>Phí bảo trì đường bộ 12 tháng</span><strong id="fee-road">1.560.000 ₫</strong></div>
+            <div><span>Bảo hiểm TNDS 12 tháng</span><strong id="fee-insurance">480.700 ₫</strong></div>
+            <div><span>Phí đăng ký biển số</span><strong id="fee-plate">14.000.000 ₫</strong></div>
+            <div><span>Phí dịch vụ đăng ký biển số</span><strong id="fee-service">3.000.000 ₫</strong></div>
+            <div><span>Lệ phí đăng kiểm</span><strong id="fee-inspection">340.000 ₫</strong></div>
+            <div class="registration-breakdown-total"><span>Tổng phí lăn bánh</span><strong id="fee-total">19.380.700 ₫</strong></div>
+          </div>
+        </section>
+        <section class="config-section promotion-section">
+          <h3>Chương trình ưu đãi</h3>
+          <label class="promotion-option"
+            ><span
+              ><strong>Công an / Quân đội</strong
+              ><small>Giảm 5% giá niêm yết</small></span
+            ><input id="service-discount" type="checkbox"
+          /></label>
+          <p class="promotion-note" id="promotion-note"></p>
+        </section>
+        <div class="summary">
+          <div><span>Mẫu xe</span><strong id="summary-model">VF 3</strong></div>
+          <div>
+            <span>Cấu hình</span
+            ><strong id="summary-version">Eco - Tiêu chuẩn 2</strong>
+          </div>
+          <div>
+            <span>Màu xe</span><strong id="summary-color">Trắng (Infinity Blanc)</strong>
+          </div>
+          <div>
+            <span>Giá niêm yết</span
+            ><strong id="list-price">285.000.000 ₫</strong>
+          </div>
+          <div id="color-fee-row">
+            <span>Phụ phí màu</span><strong id="color-fee">0 ₫</strong>
+          </div>
+          <div class="discount-row" id="promo-row">
+            <span>Khuyến mãi</span><strong id="promo-value">0 ₫</strong>
+          </div>
+          <div class="discount-row" id="service-row">
+            <span>Ưu đãi CA/QĐ</span><strong id="service-value">0 ₫</strong>
+          </div>
+          <div><span>Phí lăn bánh</span><strong id="registration-fee">19.380.700 ₫</strong></div>
+          <div><span>Khu vực đăng ký</span><strong id="registration-area-name">TP.HCM / Hà Nội</strong></div>
+          <div class="total-row">
+            <span>Giá lăn bánh dự kiến</span
+            ><strong id="estimated-price">285.000.000 ₫</strong>
+          </div>
+        </div>
+        <button class="primary-action" id="print-quote" type="button">
+          Nhận báo giá <span>→</span>
+        </button>
+      </aside>
+      <div class="overlay" id="overlay"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
